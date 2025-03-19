@@ -6,6 +6,7 @@
   "engines": {
     "node": ">= 20"
   },
+  "type": "module",
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "knex": "knex",

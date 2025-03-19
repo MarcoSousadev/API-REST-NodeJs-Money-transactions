@@ -1,8 +1,8 @@
 import type { FastifyInstance } from "fastify"
 import { z } from 'zod'
-import { knex } from "../../database"
+import { knex } from "../database"
 import { randomUUID } from "node:crypto"
-import { checkSessionIdExists } from "../../middlewares/check-session-id-exist"
+import { checkSessionIdExists } from "../middlewares/check-session-id-exist"
 
 export async function trasactionsRoutes (app:FastifyInstance) {
 
@@ -90,7 +90,7 @@ export async function trasactionsRoutes (app:FastifyInstance) {
       session_id: sessionId,
     })
     
-    return reply.status(201).send('Criado com sucesso')
+    return reply.status(201).send()
   })
 
 }
